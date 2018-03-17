@@ -1,5 +1,6 @@
 require "discordrb"
 require 'dotenv/load'
+require "meta_nexus"
 
 module Kernel
   def suppress(&block)
@@ -41,6 +42,12 @@ module InfinityBot
   at_exit do
     LOGGER.info 'Shutting Down'
     exit!
+  end
+
+  MetaNexus.config do |c|
+    c.region = 'us'
+    c.locale = 'en_US'
+    c.api_key = ENV['BLIZZARD_API_KEY']
   end
 
   BOT.run
