@@ -6,6 +6,8 @@ module InfinityBot
       Ping,
       Lmgtfy,
       Delete,
+      Character,
+      Guild,
 
     ]
 

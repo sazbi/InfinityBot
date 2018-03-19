@@ -1,6 +1,8 @@
 require "discordrb"
 require 'dotenv/load'
-require "meta_nexus"
+require 'httparty'
+
+
 
 module Kernel
   def suppress(&block)
@@ -33,6 +35,7 @@ module InfinityBot
                                             client_id: ENV['BOT_ID'],
                                             prefix: '!')
   Commands.include!
+  ApiTools.include!
 
 
   LOGGER.info "Welcome to the Infinity Bot, Designed and Created by Andrew Pierson (Sazbi)"
@@ -44,11 +47,8 @@ module InfinityBot
     exit!
   end
 
-  MetaNexus.config do |c|
-    c.region = 'us'
-    c.locale = 'en_US'
-    c.api_key = ENV['BLIZZARD_API_KEY']
-  end
+
+
 
   BOT.run
 end
