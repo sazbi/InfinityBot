@@ -5,6 +5,7 @@ module InfinityBot
     @tools = [
       Character,
       Guild,
+      Realm,
     ]
 
     def self.include!
