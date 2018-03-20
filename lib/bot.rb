@@ -36,6 +36,7 @@ module InfinityBot
                                             prefix: '!')
   Commands.include!
   ApiTools.include!
+  
 
 
   LOGGER.info "Welcome to the Infinity Bot, Designed and Created by Andrew Pierson (Sazbi)"

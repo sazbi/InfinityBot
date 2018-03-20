@@ -8,6 +8,9 @@ module InfinityBot
       Delete,
       Character,
       Guild,
+      Realm,
+      Ban,
+      Kick,
 
     ]
 
